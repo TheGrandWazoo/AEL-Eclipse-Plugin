@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ael>
+<object><name>abstract</name></object>
+<object><name>context</name></object>
+<object><name>default</name></object>
+<object><name>macro</name></object>
+<object><name>globals</name></object>
+<object><name>ignorepat</name></object>
+<object><name>switch</name></object>
+<object><name>if</name></object>
+<object><name>ifTime</name></object>
+<object><name>else</name></object>
+<object><name>random</name></object>
+<object><name>goto</name></object>
+<object><name>jump</name></object>
+<object><name>return</name></object>
+<object><name>break</name></object>
+<object><name>continue</name></object>
+<object><name>regexten</name></object>
+<object><name>hint</name></object>
+<object><name>for</name></object>
+<object><name>while</name></object>
+<object><name>case</name></object>
+<object><name>pattern</name></object>
+<object><name>catch</name></object>
+<object><name>switches</name></object>
+<object><name>eswitches</name></object>
+<object><name>includes</name></object>
+<object><name>#include</name></object>
+<!-- General Apps-->
+<app><name>Authenticate</name></app>
+<app><name>Bridge</name></app>
+<app><name>ChannelRedirect</name></app>
+<app><name>ClearHash</name></app>
+<app><name>Keepalive</name></app>
+<app><name>Log</name></app>
+<app><name>Page</name></app>
+<app><name>PickupChannel</name></app>
+<app><name>SendDTMF</name></app>
+<app><name>SendImage</name></app>
+<app><name>SendText</name></app>
+<app><name>SendURL</name></app>
+<app><name>System</name></app>
+<app><name>Transfer</name></app>
+<app><name>VMAutenticate</name></app>
+<app><name>Wait</name></app>
+<app><name>WaitExten</name></app>
+<app><name>WaitForRing</name></app>
+<!-- Billing Apps-->
+<app><name>AppendCDRUserField</name></app>
+<app><name>ForkCDR</name></app>
+<app><name>NoCDR</name></app>
+<app><name>ResetCDR</name></app>
+<app><name>SetAMAFlags</name></app>
+<!-- Call Management Apps-->
+<app><name>AMA</name></app>
+<app><name>Answer</name></app>
+<app><name>Busy</name></app>
+<app><name>ChanIsAvail</name></app>
+<app><name>Congestion</name></app>
+<app><name>Dial</name></app>
+<app><name>DISA</name></app>
+<app><name>Hangup</name></app>
+<app><name>Originate</name></app>
+<app><name>RetryDial</name></app>
+<app><name>RetryDial</name></app>
+<app><name>RetryDial</name></app>
+<app><name>Ringing</name></app>
+<!-- Caller presentation -->
+<app><name>CallingPres</name><desc>Change the presentation for the callerid</desc><version><intro>1.0</intro><dep>1.0</dep><removed>1.2</removed></version></app>
+<app><name>LookupBlacklist</name><desc>Look up Caller*ID name/number from blacklist database.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of BLACKLIST</reason></version></app>
+<app><name>LookupCIDName</name><desc>Look up CallerID Name from local database.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of ${DB(cidname/${CALLERID(num)})}.</reason></version></app>
+<app><name>PrivacyManager</name><desc>Require phone number to be entered, if no CallerID sent.</desc><version><intro>1.0</intro></version></app>)
+<app><name>SetCallerID</name><desc>Set CallerID. Deprecated in favor of CALLERID.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed></version></app>
+<app><name>SetCallerPres</name><desc>Channel independent setting of caller presenation.</desc><version><intro>1.0</intro><dep>1.6</dep><reason>Deprecated in favor of function CALLERPRES</reason></version></app>
+<app><name>SetCIDName</name><desc>Set CallerID Name.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of function CALLERID.</reason></version></app>
+<app><name>SetCIDNum</name><desc>Set only the Caller ID number (not name).</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason> Deprecated in favor of CALLERID.</reason></version></app>
+<app><name>SoftHangup</name><desc>Request hangup on another channel.</desc><version><intro>1.0</intro></version></app>
+<app><name>Zapateller</name><desc>Block telemarketers with SIT.</desc><version><intro>1.0</intro></version></app>>
+<!-- ADSI -->
+<app><name>ADSIProg</name><desc>Load Asterisk ADSI Scripts into phone</desc><version><intro>1.0</intro></version></app>
+<app><name>GetCPEID</name><desc>Get ADSI CPE ID</desc><version><intro>1.0</intro></version></app>
+<!-- Database handling -->
+<app><name>DBdel</name><desc>Delete a key from the database.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of function DB_DELETE.</reason></version></app>
+<app><name>DBdeltree</name><desc>Delete a family or keytree from the database.</desc><version><intro>1.0</intro></version></app>
+<app><name>DBget</name><desc>Retrieve a value from the database.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason> Deprecated in favor of DB.</reason></version></app>
+<app><name>DBput</name><desc>Store a value in the database.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason> Deprecated in favor of DB.</reason></version></app>
+<app><name>RealTime</name><desc>Populate variables with details from database using RealTime.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of REALTIME.</reason></version></app>
+<app><name>RealTimeUpdate</name><desc>Update a field in a database using RealTime.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of REALTIME.</reason></version></app>
+<!-- Application intergration -->
+<app><name>AGI</name><desc>Executes an AGI compliant application.</desc><version><intro>1.0</intro></version></app>
+<app><name>DeadAGI</name><desc>Executes AGI on a hung-up channel.</desc><version><intro>1.0</intro></version></app>
+<app><name>EAGI</name><desc>Executes an AGI compliant application with sound channels.</desc><version><intro>1.0</intro></version></app>
+<app><name>EnumLookup</name><desc>Lookup number in ENUM.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function ENUMLOOKUP.</reason></version></app>
+<app><name>ExternalIVR</name><desc>Executes an ExternalIVR generator.</desc><version><intro>1.2</intro></version></app>
+<app><name>JabberJoin</name><desc>Join a group chat.</desc><version><intro>1.8</intro></version></app>
+<app><name>JabberLeave</name><desc>Leave a group chat.</desc><version><intro>1.8</intro></version></app>
+<app><name>JabberSend</name><desc>Send a text message via Jabber.</desc><version><intro>1.4</intro></version></app>
+<app><name>JabberSendGroup</name><desc>Send a message to a group chat.</desc><version><intro>1.8</intro></version></app>
+<app><name>JabberStatus</name><desc>Return presence status of client or transport as values 1-7.</desc><version><intro>1.4</intro></version></app>
+<app><name>Jack</name><desc>Interface to JACK audio for audio manipulation.</desc><version><intro>1.6</intro></version></app>
+<app><name>Read</name><desc>Read DTMF tones into a variable.</desc><version><intro>1.0</intro></version></app>
+<app><name>ReadFile</name><desc>Read the contents of a text file into a channel variable.</desc><version><intro>1.2</intro></version></app>
+<app><name>TXTCIDName</name><desc>Lookup caller name from TXT record.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function TXTCIDNAME.</reason></version></app>
+<app><name>UserEvent</name><desc>Send an arbitrary event to the manager interface.</desc><version><intro>1.0</intro></version></app>
+<!-- Control flow and timeouts -->
+<app><name>AbsoluteTimeout</name><desc>Set absolute maximum time of call.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function TIMEOUT(absolute)</reason></version></app>
+<app><name>ContinueWhile</name><desc>Restart a while loop</desc><version><intro>1.4</intro></version></app>
+<app><name>DigitTimeout</name><desc>Set maximum timeout between digits.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of TIMEOUT(digit)</reason></version></app>
+<app><name>EndWhile</name><desc>End A While Loop.</desc><version><intro>1.2</intro></version></app>
+<app><name>Exec</name><desc>Execute dialplan application.</desc><version><intro>1.0</intro></version></app>
+<app><name>ExecIf</name><desc>Conditional exec.</desc><version><intro>1.2</intro></version></app>
+<app><name>ExecIfTime</name><desc>Executes dialplan application conditionally based on current time.</desc><version><intro>1.2</intro></version></app>
+<app><name>ExitWhile</name><desc>End a While loop.</desc><version><intro>1.2</intro></version></app>
+<app><name>Gosub</name><desc>Jump to a subroutine and return.</desc><version><intro>1.2</intro></version></app>
+<app><name>GosubIf</name><desc>Conditional jump to a subroutine and return.</desc><version><intro>1.2</intro></version></app>
+<app><name>Goto</name><desc>Goto a particular priority, extension, or context.</desc><version><intro>1.0</intro></version></app>
+<app><name>GotoIf</name><desc>Conditional goto.</desc><version><intro>1.0</intro></version></app>
+<app><name>GotoIfTime</name><desc>Conditional goto on current time.</desc><version><intro>1.0</intro></version></app>
+<app><name>Macro</name><desc>Macro Implementation.</desc><version><intro>1.0</intro><dep>1.6</dep><removed></removed><reason>Deprecated in favor of Gosub/Return.</reason></version></app>
+<app><name>MacroExclusive</name><desc>Only one channel at a time may call this macro, all others have to wait</desc><version><intro>1.4</intro><dep>1.6</dep><removed></removed><reason>Replaced by dialplan functions LOCK(), TRYLOCK(), and UNLOCK()</reason></version></app>
+<app><name>MacroExit</name><desc>Exit the macro as if it had fully completed.</desc><version><intro>1.4</intro><dep>1.6</dep><removed></removed><reason>Deprecated in favor of Return</reason></version></app>
+<app><name>MacroIf</name><desc>Conditional Macro Implementation.</desc><version><intro>1.0</intro><dep>1.6</dep><removed></removed><reason>Deprecated in favor of GosubIf</reason></version></app>
+<app><name>NoOp</name><desc>No operation. For debugging, see Verbose or Log.</desc><version><intro>1.0</intro></version></app>
+<app><name>Random</name><desc>jump to a specified location based on a random probability.</desc><version><intro>1.0</intro><dep>1.4</dep><removed>1.6</removed><reason>Deprecated in favor of GotoIf($[${RAND(1,100)} > number]?label)</reason></version></app>
+<app><name>ResponseTimeout</name><desc>Set maximum timeout awaiting response.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function TIMEOUT(response)</reason></version></app>
+<app><name>Return</name><desc>Return from a Gosub or GosubIf.</desc><version><intro>1.2</intro></version></app>
+<app><name>StackPop</name><desc>Remove a return address without returning.</desc><version><intro>1.2</intro></version></app>
+<app><name>While</name><desc>Start A While Loop.</desc><version><intro>1.2</intro></version></app>
+<!-- String & variable manipulation -->
+<app><name>Cut</name><desc>Split a string on a specified delimiter.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function CUT.</reason></version></app>
+<app><name>DumpChan</name><desc>Dump Info About The Calling Channel.</desc><version><intro>1.2</intro></version></app>
+<app><name>ImportVar</name><desc>Set variable to value.</desc><version><intro>1.2</intro></version></app>
+<app><name>Math</name><desc>Perform (rather simple) calculations.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of MATH.</reason></version></app>
+<app><name>MSet</name><desc>Set channel variable(s) or function value(s)</desc><version><intro>1.6</intro></version></app>
+<app><name>SetGlobalVar</name><desc>Set variable to value.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of Asterisk func global.</reason></version></app>
+<app><name>Set</name><desc>Set channel variable(s) or function value(s).</desc><version><intro>1.0</intro></version></app>
+<!-- Sounds: Playback -->
+<app><name>Background</name><desc>Play a sound file while waiting an extension.</desc><version><intro>1.0</intro></version></app>
+<app><name>BackgroundDetect</name><desc>Background a file with talk detect.</desc><version><intro>1.0</intro></version></app>
+<app><name>ControlPlayback</name><desc>Play a sound file with fast forward, rewind and exit controls.</desc><version><intro>1.0</intro></version></app>
+<app><name>DateTime</name><desc>Say the date and/or time. Same as SayUnixTime.</desc><version><intro>1.0</intro></version></app>
+<app><name>Echo</name><desc>Echo audio read back to the user.</desc><version><intro>1.0</intro></version></app>
+<app><name>Festival</name><desc>Say text with the Festival voice synthesizer.</desc><version><intro>1.0</intro></version></app>
+<app><name>Milliwatt</name><desc>Generate a Constant 1000Hz tone at 0dbm (mu-law).</desc><version><intro>1.0</intro></version></app>
+<app><name>MP3Player</name><desc>Play an MP3 sound file or stream.</desc><version><intro>1.0</intro></version></app>
+<app><name>MusicOnHold</name><desc>Play Music On Hold indefinitely.</desc><version><intro>1.0</intro></version></app>
+<app><name>Playback</name><desc>Play a sound file.</desc><version><intro>1.0</intro></version></app>
+<app><name>Playtones</name><desc>Play a tone list while executing other commands.</desc><version><intro>1.0</intro></version></app>
+<app><name>Proceeding</name><desc>Indicate proceeding</desc><version><intro>1.6</intro></version></app>
+<app><name>Progress</name><desc>Play early audio to the caller before answering the line.</desc><version><intro>1.0</intro></version></app>
+<app><name>SayUnixTime</name><desc>Say the date and/or time.</desc><version><intro>1.0</intro></version></app>
+<app><name>SayAlpha</name><desc>Say Alpha.</desc><version><intro>1.0</intro></version></app>
+<app><name>Asterisk cmd SayCountedAdj</name><desc>Say declining counting phrases</desc><version><intro>1.8</intro></version></app>
+<app><name>Asterisk cmd SayCountedNoun</name><desc>Say declining counting phrases</desc><version><intro>1.8</intro></version></app>
+<app><name>SayDigits</name><desc>Say Digits.</desc><version><intro>1.0</intro></version></app>
+<app><name>SayNumber</name><desc>Say Number.</desc><version><intro>1.0</intro></version></app>
+<app><name>SayPhonetic</name><desc>Say Phonetic.</desc><version><intro>1.0</intro></version></app>
+<app><name>SetMusicOnHold</name><desc>Set default Music On Hold class.</desc><version><intro>1.0</intro><dep>1.6</dep><removed></removed><reason>Deprecated in favor of function CHANNEL(musicclass)</reason></version></app>
+<app><name>SetLanguage</name><desc>Change language setting for sound playback.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function LANGUAGE.</reason></version></app>
+<app><name>StopPlaytones</name><desc>Stop playing a tone list.</desc><version><intro>1.0</intro></version></app>
+<!-- Sounds: Recording and monitoring (listening-in) -->
+<app><name>ChangeMonitor</name><desc>Change monitoring filename of a channel.</desc><version><intro>1.0</intro></version></app>
+<app><name>ChanSpy</name><desc>Universal channel barge-in.</desc><version><intro>1.2</intro></version></app>
+<app><name>Dictate</name><desc>Records and plays back a dictation.</desc><version><intro>1.2</intro></version></app>
+<app><name>ExtenSpy</name><desc>Listen/whisper to a specific extension.</desc><version><intro>1.4</intro></version></app>
+<app><name>MixMonitor</name><desc>Record and mix call legs natively (unlike Monitor).</desc><version><intro>1.2</intro></version></app>
+<app><name>Monitor</name><desc>Record a telephone conversation to a sound file.</desc><version><intro>1.0</intro></version></app>
+<app><name>Record</name><desc>Record user voice input to a file.</desc><version><intro>1.0</intro></version></app>
+<app><name>StopMonitor</name><desc>Stop monitoring a channel.</desc><version><intro>1.0</intro></version></app>
+<app><name>StopMixMonitor</name><desc>Stop monitoring a channel monitored with MixMonitor.</desc><version><intro>1.4</intro></version></app>
+<!-- SIP commands -->
+<app><name>SIPAddHeader</name><desc>Add header to outbound SIP invite.</desc><version><intro>1.2</intro></version></app>
+<app><name>SIPdtmfMode</name><desc>Change DTMF mode during SIP call.</desc><version><intro>1.0</intro></version></app>
+<app><name>SIPGetHeader</name><desc>Get a SIP header from an incoming call.</desc><version><intro>1.0</intro><dep>1.2</dep><removed>1.4</removed><reason>Deprecated in favor of function SIP_HEADER().</reason></version></app>
+
+<!-- Stuff -->
+
+<app><name>queue</name></app>
+<app><name>queuelog</name></app>
+<app><name>set</name></app>
+<!-- Functions -->
+<!-- Database -->
+<function><name>DB_DELETE</name></function>
+</ael>

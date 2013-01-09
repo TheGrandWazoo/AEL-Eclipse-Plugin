@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="AEL Editor"
+            extensions="ael"
+            icon="icons/asterisk.bmp"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="ael.editors.AELEditor"
+            id="ael.editors.AELEditor">
+      </editor>
+   </extension>
+</plugin>

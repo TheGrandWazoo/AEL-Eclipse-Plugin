@@ -5,12 +5,12 @@ A plugin to Eclipse for AEL (Asterisk Extension Langange).
 
 The plugin is under development, so be gentle.
 
-It provides the following...
-	* Application name highlighting
-	* Function name highlighting
-	* Code block rollup
-	* Comment rollup
-	* Use /** for documention highlighting (like DoxyGen)
+It provides the following...<br>
+	* Application name highlighting<<br>
+	* Function name highlighting<br>
+	* Code block rollup<br>
+	* Comment rollup<br>
+	* Use /** for documention highlighting (like DoxyGen)<br>
 
 Currently, place the ael.xml file in the user directory.  This contains application
 and function name for highlighting.

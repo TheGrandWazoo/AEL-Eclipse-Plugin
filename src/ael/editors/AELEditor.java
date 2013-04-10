@@ -1,6 +1,6 @@
 package ael.editors;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -8,10 +8,13 @@ import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
+//import org.w3c.dom.Element;
+//import org.w3c.dom.Node;
+//import org.w3c.dom.NodeList;
 
-import org.eclipse.jface.text.Position;
+//import org.eclipse.jface.text.Position;
 import org.eclipse.jface.text.source.Annotation;
-import org.eclipse.jface.text.source.IAnnotationModel;
+//import org.eclipse.jface.text.source.IAnnotationModel;
 import org.eclipse.jface.text.source.ISourceViewer;
 import org.eclipse.jface.text.source.IVerticalRuler;
 import org.eclipse.jface.text.source.projection.ProjectionAnnotation;
@@ -28,6 +31,7 @@ public class AELEditor extends TextEditor {
 	private ProjectionAnnotationModel annotationModel;
 	private ColorManager colorManager;
 	public static Document doc;
+	public static ArrayList<Keywords> AssistantKeywords = new ArrayList<Keywords>();
 
 	public AELEditor()
 	{
@@ -65,7 +69,7 @@ public class AELEditor extends TextEditor {
 		annotationModel = viewer.getProjectionAnnotationModel();
 	}
 
-	public void updateFoldingStructure(ArrayList positions)
+	public void updateFoldingStructure(ArrayList<Object> positions)
 	{
 		Annotation[] annotations = new Annotation[positions.size()];
 		
@@ -73,7 +77,7 @@ public class AELEditor extends TextEditor {
 		 * This will hold the new annotations along
 		 * with their corresponding positions
 		 */
-		HashMap newAnnotations = new HashMap();
+		HashMap<ProjectionAnnotation, Object> newAnnotations = new HashMap<ProjectionAnnotation, Object>();
 		
 		for (int i = 0; i < positions.size(); i ++) {
 			ProjectionAnnotation annotation = new ProjectionAnnotation();

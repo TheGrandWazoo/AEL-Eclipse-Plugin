@@ -19,7 +19,7 @@ public class AELReconcilingStrategy implements IReconcilingStrategy, IReconcilin
 	/**
 	 * holds the calculated positions
 	 */
-	protected final ArrayList fPositions = new ArrayList();
+	protected final ArrayList<Object> fPositions = new ArrayList<Object>();
 
 	/**
 	 * The offset of the next character to be read 
@@ -115,7 +115,7 @@ public class AELReconcilingStrategy implements IReconcilingStrategy, IReconcilin
 				case '/' :
 					startOffset = this.cNextPos - 1;
 					startNewLines = newLines;
-					tagString = fDocument.get(startOffset, Math.min(this.cNextPos - startOffset, this.fRangeEnd -startOffset));
+					tagString = fDocument.get(startOffset, Math.min(this.cNextPos - startOffset, this.fRangeEnd - startOffset));
 					if (classifyComment() == COMMENT_TAG) {
 						newLines += this.cNewLines;
 						if (newLines > startNewLines + 1) {
@@ -126,7 +126,7 @@ public class AELReconcilingStrategy implements IReconcilingStrategy, IReconcilin
 				case '{' :
 					startOffset = this.cNextPos - 1;
 					startNewLines = newLines;
-					tagString = fDocument.get(startOffset, Math.min(this.cNextPos - startOffset, this.fRangeEnd -startOffset));
+					tagString = fDocument.get(startOffset, Math.min(this.cNextPos - startOffset, this.fRangeEnd - startOffset));
 					newLines += recursiveTokens(depth + 1);
 					if (newLines > startNewLines + 1) {
 						emitPosition(startOffset, this.cNextPos - startOffset);
@@ -202,7 +202,7 @@ public class AELReconcilingStrategy implements IReconcilingStrategy, IReconcilin
 	{
 		this.cNewLines = 0;
 		try {
-			if ('}' == token) {
+			if ('{' == token) {
 				this.cNewLines += this.eatToEndOfLine();
 				return START_BLOCK;
 			}

@@ -96,10 +96,13 @@ public class AELConfiguration extends SourceViewerConfiguration {
 
 	public IContentAssistant getContentAssistant(ISourceViewer sourceViewer)
 	{
-		ContentAssistant assistant = new ContentAssistant();
-		assistant.setContentAssistProcessor(new AELContentAssistantProcessor(), IDocument.DEFAULT_CONTENT_TYPE);
-		assistant.enableAutoActivation(true);
-		return assistant;
+		ContentAssistant cAssistant = new ContentAssistant();
+		cAssistant.setContentAssistProcessor(new AELContentAssistantProcessor(), IDocument.DEFAULT_CONTENT_TYPE);
+		cAssistant.setInformationControlCreator(getInformationControlCreator(sourceViewer));
+		cAssistant.enableAutoActivation(true);
+		cAssistant.setAutoActivationDelay(500);
+		cAssistant.setProposalPopupOrientation(IContentAssistant.PROPOSAL_OVERLAY);
+		return cAssistant;
 	}
 
 	public IReconciler getReconciler(ISourceViewer souceViewer)

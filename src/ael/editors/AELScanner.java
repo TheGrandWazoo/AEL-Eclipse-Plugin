@@ -3,7 +3,7 @@ package ael.editors;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.w3c.dom.Document;
+//import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -68,6 +68,7 @@ public class AELScanner extends RuleBasedScanner {
 					Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
 					NodeList fstNm = ((Node) fstNmElmnt).getChildNodes();
 					aelWordRules.addWord(fstNm.item(0).getNodeValue().toString(), aelKeyWords);
+					AELEditor.AssistantKeywords.add(new Keywords(fstNm.item(0).getNodeValue().toString(), ""));
 				}
 			}
 			NodeList appLst = AELEditor.doc.getElementsByTagName("app");
@@ -79,6 +80,7 @@ public class AELScanner extends RuleBasedScanner {
 					Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
 					NodeList fstNm = ((Node) fstNmElmnt).getChildNodes();
 					aelWordRules.addWord(fstNm.item(0).getNodeValue().toString(), asteriskApp);
+					AELEditor.AssistantKeywords.add(new Keywords(fstNm.item(0).getNodeValue().toString(), ""));
 				}
 			}
 			NodeList funcLst = AELEditor.doc.getElementsByTagName("function");
@@ -90,6 +92,7 @@ public class AELScanner extends RuleBasedScanner {
 					Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
 					NodeList fstNm = ((Node) fstNmElmnt).getChildNodes();
 					aelWordRules.addWord(fstNm.item(0).getNodeValue().toString(), asteriskApp);
+					AELEditor.AssistantKeywords.add(new Keywords(fstNm.item(0).getNodeValue().toString(), ""));
 				}
 			}
 		}
